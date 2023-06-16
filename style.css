@@ -31,7 +31,7 @@ body {
 .chatbot__box {
   height: 510px;
   overflow-y: auto;
-  padding: 15px 20px 70px;
+  padding: 30px 20px 70px;
 }
 .chatbot__chat {
   display: flex;
@@ -63,4 +63,12 @@ body {
 .outgoing {
   justify-content: flex-end;
   margin: 20px 0;
+}
+.chatbot__input-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #efa94a;
+  background: #fefefe;
+  padding: 5px 20px;
 }
