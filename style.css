@@ -68,7 +68,24 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
   border-top: 1px solid #efa94a;
   background: #fefefe;
   padding: 5px 20px;
+}
+.chatbot__textarea {
+  width: 100%;
+  min-height: 55px;
+  font-size: 0.95rem;
+  padding: 16px 15px 16px 0;
+  border: none;
+  outline: none;
+  resize: none;
+}
+.chatbot__input-box span {
+  font-size: 1.75rem;
+  color: #010101;
+  cursor: pointer;
 }
