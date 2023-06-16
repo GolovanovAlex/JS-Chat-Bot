@@ -4,10 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
     <title>Chat Bot JavaScript</title>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="chatbot">
+      <div class="chatbot__header">
+        <h3 class="chatbox__title">Chatbot</h3>
+      </div>
+      <ul class="chatbot__box">
+        <li class="chatbot__chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>
+            Hi there <br />
+            How can I help you today?
+          </p>
+        </li>
+        <li class="chatbot__chat outgoing">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+            tenetur.
+          </p>
+        </li>
+      </ul>
+      <div class="chatbot__input-box">
+        <textarea
+          class="chatbot__textarea"
+          placeholder="Enter a message..."
+        ></textarea>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
