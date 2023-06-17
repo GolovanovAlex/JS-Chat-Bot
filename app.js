@@ -1,9 +1,12 @@
+const chatbotToggle = document.querySelector('.chatbot__button');
 const sendChatBtn = document.querySelector('.chatbot__input-box span');
 const chatInput = document.querySelector('.chatbot__textarea');
 const chatBox = document.querySelector('.chatbot__box');
+const chatbotCloseBtn = document.querySelector('.chatbot__header span');
 
 let userMessage;
 // Need GPT key
+const inputInitHeight = chatInput.scrollHeight;
 const API_KEY = 'HERE';
 
 const createChatLi = (message, className) => {
@@ -40,6 +43,7 @@ const generateResponse = (incomingChatLi) => {
       messageElement.textContent = data.choices[0].message.content;
     })
     .catch((error) => {
+      messageElement.classList.add('error');
       messageElement.textContent = 'Oops! Please try again!';
       console.log(error);
     })
@@ -49,6 +53,8 @@ const generateResponse = (incomingChatLi) => {
 const handleChat = () => {
   userMessage = chatInput.value.trim();
   if (!userMessage) return;
+  chatInput.value = '';
+  chatInput.style.height = `${inputInitHeight}px`;
 
   chatBox.appendChild(createChatLi(userMessage, 'outgoing'));
   chatBox.scrollTo(0, chatBox.scrollHeight);
@@ -61,4 +67,20 @@ const handleChat = () => {
   }, 600);
 };
 
+chatInput.addEventListener('input', () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+chatInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+chatbotToggle.addEventListener('click', () =>
+  document.body.classList.toggle('show-chatbot')
+);
+chatbotCloseBtn.addEventListener('click', () =>
+  document.body.classList.remove('show-chatbot')
+);
 sendChatBtn.addEventListener('click', handleChat);
