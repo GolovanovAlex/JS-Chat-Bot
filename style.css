@@ -76,7 +76,7 @@ body {
 .chatbot__box {
   height: 510px;
   overflow-y: auto;
-  padding: 30px 20px 70px;
+  padding: 30px 20px 100px;
 }
 .chatbot__chat {
   display: flex;
@@ -84,6 +84,7 @@ body {
 .chatbot__chat p {
   max-width: 75%;
   font-size: 0.95rem;
+  white-space: pre-wrap;
   color: #fefefe;
   background-color: #efa94a;
   border-radius: 10px 10px 0 10px;
@@ -107,6 +108,9 @@ body {
 }
 .outgoing {
   justify-content: flex-end;
+  margin: 20px 0;
+}
+.incoming {
   margin: 20px 0;
 }
 .chatbot__input-box {
