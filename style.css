@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #8fc1e3;
+  background-color: #bdc3c7;
   font-family: 'Poppins', sans-serif;
 }
 .chatbot__button {
@@ -18,8 +18,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #efa94a;
-  color: #fefefe;
+  background: #227ebb;
+  color: #f3f7f8;
   border: none;
   border-radius: 50%;
   outline: none;
@@ -40,7 +40,7 @@ body {
   bottom: 100px;
   right: 40px;
   width: 420px;
-  background-color: #fefefe;
+  background-color: #f3f7f8;
   border-radius: 15px;
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1) 0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transform: scale(0.5);
@@ -56,7 +56,7 @@ body {
 }
 .chatbot__header {
   position: relative;
-  background-color: #efa94a;
+  background-color: #227ebb;
   text-align: center;
   padding: 16px 0;
 }
@@ -65,13 +65,13 @@ body {
   position: absolute;
   top: 50%;
   right: 20px;
-  color: #010101;
+  color: #202020;
   transform: translateY(-50%);
   cursor: pointer;
 }
 .chatbox__title {
   font-size: 1.4rem;
-  color: #fefefe;
+  color: #f3f7f8;
 }
 .chatbot__box {
   height: 510px;
@@ -85,8 +85,8 @@ body {
   max-width: 75%;
   font-size: 0.95rem;
   white-space: pre-wrap;
-  color: #fefefe;
-  background-color: #efa94a;
+  color: #202020;
+  background-color: #019ef9;
   border-radius: 10px 10px 0 10px;
   padding: 12px 16px;
 }
@@ -95,16 +95,16 @@ body {
   background: #f8d7da;
 }
 .incoming p {
-  color: #010101;
-  background: #f2f2f2;
+  color: #202020;
+  background: #bdc3c7;
   border-radius: 10px 10px 10px 0;
 }
 .incoming span {
   width: 32px;
   height: 32px;
   line-height: 32px;
-  color: #fefefe;
-  background-color: #8fc1e3;
+  color: #f3f7f8;
+  background-color: #227ebb;
   border-radius: 4px;
   text-align: center;
   align-self: flex-end;
@@ -124,8 +124,8 @@ body {
   display: flex;
   gap: 5px;
   align-items: center;
-  border-top: 1px solid #efa94a;
-  background: #fefefe;
+  border-top: 1px solid #227ebb;
+  background: #f3f7f8;
   padding: 5px 20px;
 }
 .chatbot__textarea {
@@ -134,17 +134,21 @@ body {
   max-height: 180px;
   font-size: 0.95rem;
   padding: 16px 15px 16px 0;
+  color: #202020;
   border: none;
   outline: none;
   resize: none;
+  background: transparent;
+}
+.chatbot__textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
 }
 .chatbot__input-box span {
   font-size: 1.75rem;
-  color: #010101;
+  color: #202020;
   cursor: pointer;
   visibility: hidden;
 }
-
 .chatbot__textarea:valid ~ span {
   visibility: visible;
 }
